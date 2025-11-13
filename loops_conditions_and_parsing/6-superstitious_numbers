@@ -1,28 +1,32 @@
 #!/usr/bin/env bash
+# This script displays superstitious numbers from 1 to 20 using while and case.
 
+# Инициализация счетчика с 1
 COUNT=1
 
+# Цикл от 1 до 20
 while [ $COUNT -le 20 ]
 do
     case $COUNT in
+        # 4-я итерация: 4 bad luck from China (включая пробел)
         4)
-            # %d - число, " " - один пробел, %s - строка, \n - перевод строки
-            printf "%d " "$COUNT"
-            printf "%s\n" "bad luck from China"
+            echo "$COUNT bad luck from China"
             ;;
+        # 9-я итерация: 9 bad luck from Japan
         9)
-            printf "%d " "$COUNT"
-            printf "%s\n" "bad luck from Japan"
+            echo "$COUNT bad luck from Japan"
             ;;
+        # 17-я итерация: 17 bad luck from Italy
         17)
-            printf "%d " "$COUNT"
-            printf "%s\n" "bad luck from Italy"
+            echo "$COUNT bad luck from Italy"
             ;;
+        # Все остальные: просто число
         *)
-            # Для остальных чисел просто печатаем число и перевод строки
-            printf "%d\n" "$COUNT"
+            echo "$COUNT"
             ;;
     esac
     
+    # Инкремент
     COUNT=$((COUNT + 1))
 done
+
