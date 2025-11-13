@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#blah
+C=0
+while [ $C -lt 10 ]
+do
+	if [ $c -eq 0 || $c -eq 1 || $c -eq 2 || $c -eq 4 || $c -eq 5 || $c -eq 6 || $c -eq 8 || $c -eq 9 ] then
+		echo "Best School
+	fi
+	if [ $c -eq 3 ]
+	then
+		echo "bad Luck"
+	fi
+	if [ $c -eq 7 ]
+	then
+		echo "good luck"
+	fi
+	c=$((c + 1))
