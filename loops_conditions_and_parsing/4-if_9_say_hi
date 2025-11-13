@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#rqwrqe
 COUNT=0
 while [ $COUNT -lt 8 ]
 do
