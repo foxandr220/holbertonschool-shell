@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# For Is - display filenames after first dash
+
+for file in *; do
+    # Check if it's a regular file (not a directory) and not hidden
+    if [ -f "$file" ]; then
+        # Remove everything before and including the first dash
+        # Using parameter expansion to remove prefix up to first dash
+        if [[ "$file" == *-* ]]; then
+            echo "${file#*-}"
+        else
+            # If no dash found, display the original filename
+            echo "$file"
+        fi
+    fi
+done
