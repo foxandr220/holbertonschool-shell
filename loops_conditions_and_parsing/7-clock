@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Clock script - displays time for 12 hours and 59 minutes
+
+hour=0
+
+# Outer loop for hours (0 to 12)
+while [ $hour -le 12 ]; do
+    echo "Hour: $hour"
+    
+    minute=1
+    # Inner loop for minutes (1 to 59)
+    while [ $minute -le 59 ]; do
+        echo "$minute"
+        minute=$((minute + 1))
+    done
+    
+    hour=$((hour + 1))
+done
