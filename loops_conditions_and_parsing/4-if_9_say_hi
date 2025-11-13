@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+COUNT=0
+while [ $COUNT -lt 8 ]
+do
+	echo "Best School"
+	COUNT=$((COUNT + 1))
+done
+echo "Hi"
+echo "Best School"
