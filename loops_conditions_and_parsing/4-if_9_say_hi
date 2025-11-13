@@ -1,12 +1,21 @@
 #!/usr/bin/env bash
-#rqwrqe
+# Write a Bash script that displays Best School 10 times, but for the 9th iteration, displays Best School and then Hi on a new line.
+
+# Initialize a counter variable
 COUNT=0
-while [ $COUNT -lt 9 ]
+
+# Loop 10 times (from 0 to 9)
+while [ $COUNT -lt 10 ]
 do
-	COUNT=$((COUNT + 1))
-	echo "Best School"
-	if [ $COUNT -eq 8 ] then
-		echo "Hi"
-	fi
+    # 1. Print Best School first (This is the Nth line of Best School)
+    echo "Best School"
+    
+    # 2. Check if this is the 9th iteration (COUNT is 8 when the 9th line prints)
+    if [ $COUNT -eq 8 ]
+    then
+        echo "Hi"
+    fi
+    
+    # 3. Increment the counter last
+    COUNT=$((COUNT + 1))
 done
-echo "Best School"
