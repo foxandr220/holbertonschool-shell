@@ -12,3 +12,4 @@ do
 		echo "good luck"
 	fi
 	c=$((c + 1))
+done
