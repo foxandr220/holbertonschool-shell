@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# This script displays numbers from 1 to 20, replacing 4, 9, and 17 with superstitious phrases.
+
+# Initialize a counter starting at 1
+COUNT=1
+
+# Loop while the counter is less than or equal to 20
+while [ $COUNT -le 20 ]
+do
+    # Check for 4th iteration
+    if [ $COUNT -eq 4 ]
+    then
+        echo "$COUNT and then bad luck from China"
+    
+    # Check for 9th iteration
+    elif [ $COUNT -eq 9 ]
+    then
+        echo "$COUNT and then bad luck from Japan"
+    
+    # Check for 17th iteration
+    elif [ $COUNT -eq 17 ]
+    then
+        echo "$COUNT and then bad luck from Italy"
+        
+    # For all other iterations (print the number)
+    else
+        echo "$COUNT"
+    fi
+    
+    # Increment the counter
+    COUNT=$((COUNT + 1))
+done
