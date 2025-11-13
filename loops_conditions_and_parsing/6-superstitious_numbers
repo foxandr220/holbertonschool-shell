@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# This script displays numbers from 1 to 20, replacing 4, 9, and 17 with superstitious phrases.
 
 COUNT=1
 
@@ -7,19 +6,21 @@ while [ $COUNT -le 20 ]
 do
     case $COUNT in
         4)
-            echo -n "$COUNT "
-            echo "bad luck from China"
+            # %d - число, " " - один пробел, %s - строка, \n - перевод строки
+            printf "%d " "$COUNT"
+            printf "%s\n" "bad luck from China"
             ;;
         9)
-            echo -n "$COUNT "
-            echo "bad luck from Japan"
+            printf "%d " "$COUNT"
+            printf "%s\n" "bad luck from Japan"
             ;;
         17)
-            echo -n "$COUNT "
-            echo "bad luck from Italy"
+            printf "%d " "$COUNT"
+            printf "%s\n" "bad luck from Italy"
             ;;
         *)
-            echo "$COUNT"
+            # Для остальных чисел просто печатаем число и перевод строки
+            printf "%d\n" "$COUNT"
             ;;
     esac
     
