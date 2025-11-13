@@ -6,5 +6,7 @@ do
 	echo "Best School"
 	COUNT=$((COUNT + 1))
 done
-echo "Hi"
+if [ $COUNT -eq 8 ] then
+	echo "Hi"
+fi
 echo "Best School"
