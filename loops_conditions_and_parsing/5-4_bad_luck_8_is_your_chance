@@ -1,15 +1,27 @@
 #!/usr/bin/env bash
-#blah
-C=0
-while [ $C -lt 10 ]
+# This script loops from 1 to 10 and displays different text based on the iteration number.
+
+# Initialize counter starting at 1 (as required: 1 to 10)
+C=1
+
+# Loop while C is less than or equal to 10
+while [ $C -le 10 ]
 do
-	if [[ $c==0 || $c==1 || $c==2 || $c==4 || $c==5 || $c==6 || $c==8 || $c==9 ]] then
-		echo "Best School
-        elif [ $c -eq 3 ]
-	then
-		echo "bad Luck"
-        else
-		echo "good luck"
-	fi
-	c=$((c + 1))
+    # 1. Check for the 4th iteration ("bad luck")
+    if [ $C -eq 4 ]
+    then
+        echo "bad luck"
+    
+    # 2. Check for the 8th iteration ("good luck")
+    elif [ $C -eq 8 ]
+    then
+        echo "good luck"
+    
+    # 3. For all other iterations ("Best School")
+    else
+        echo "Best School"
+    fi
+    
+    # Increment the counter
+    C=$((C + 1))
 done
