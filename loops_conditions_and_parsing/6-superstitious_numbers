@@ -1,35 +1,31 @@
-#!/usr/bin/env bash
-# This script displays numbers from 1 to 20, replacing 4, 9, and 17 with superstitious phrases.
+#!/bin/bash
 
-# Инициализируем счетчик, начиная с 1
-COUNT=1
+# Initialize the counter variable
+i=1
 
-# Цикл от 1 до 20
-while [ $COUNT -le 20 ]
+# Loop from 1 to 20 using the 'while' loop
+while [ $i -le 20 ]
 do
-    # Используем case для проверки специальных чисел
-    case $COUNT in
-        # 4-я итерация: '4 ' и 'bad luck from China' на одной строке
+    # Use the 'case' statement to check for specific iteration numbers (i)
+    case $i in
+        # 4th iteration: "4 and then bad luck from China"
         4)
-            echo -n "$COUNT "
-            echo "bad luck from China"
+            echo "$i and then bad luck from China"
             ;;
-        # 9-я итерация
+        # 9th iteration: "9 and then bad luck from Japan"
         9)
-            echo -n "$COUNT "
-            echo "bad luck from Japan"
+            echo "$i and then bad luck from Japan"
             ;;
-        # 17-я итерация
+        # 17th iteration: "17 and then bad luck from Italy"
         17)
-            echo -n "$COUNT "
-            echo "bad luck from Italy"
+            echo "$i and then bad luck from Italy"
             ;;
-        # Для всех остальных чисел
+        # Default case: just display the number
         *)
-            echo "$COUNT"
+            echo "$i"
             ;;
     esac
-    
-    # Увеличиваем счетчик
-    COUNT=$((COUNT + 1))
+
+    # Increment the counter
+    i=$((i + 1))
 done
