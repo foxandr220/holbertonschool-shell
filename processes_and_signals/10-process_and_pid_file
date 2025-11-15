@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# Manage PID file and react to signals
+
+PIDFILE="/var/run/myscript.pid"
+
+# Create PID file
+echo "$$" > "$PIDFILE"
+
+# Cleanup function
+cleanup() {
+    rm -f "$PIDFILE"
+    exit
+}
+
+# Trap SIGINT (Ctrl+C)
+trap 'echo "Y U no love me?!"; cleanup' SIGINT
+
+# Trap SIGTERM
+trap 'echo "I hate the kill command"; cleanup' SIGTERM
+
+# Trap SIGQUIT
+trap 'cleanup' SIGQUIT
+
+# Infinite loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
+
