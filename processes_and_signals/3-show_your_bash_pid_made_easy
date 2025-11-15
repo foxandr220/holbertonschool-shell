@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Display PIDs and names of processes containing the word bash
+# shellcheck disable=SC2009
+
+for pid in /proc/[0-9]*; do
+    cmd=$(cat "$pid/comm" 2>/dev/null)
+    if [[ $cmd == *bash* ]]; then
+        echo "$(basename "$pid") $cmd"
+    fi
+done
